@@ -169,3 +169,9 @@ int f6(void) {
 // OGCG-NEXT: entry:
 // OGCG-NEXT:   %[[GV:.*]] = load i32, ptr @gv, align 4
 // OGCG-NEXT:   ret i32 %[[GV]]
+
+enum {
+  um = 0,
+  dois = 1,
+};
+

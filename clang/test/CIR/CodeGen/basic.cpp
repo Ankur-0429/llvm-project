@@ -87,3 +87,8 @@ int *f5() {
 // CHECK-NEXT:   cir.store %[[P]], %[[RET_ADDR]] : !cir.ptr<!s32i>, !cir.ptr<!cir.ptr<!s32i>>
 // CHECK-NEXT:   %[[RET_VAL:.*]] = cir.load %[[RET_ADDR]] : !cir.ptr<!cir.ptr<!s32i>>, !cir.ptr<!s32i>
 // CHECK-NEXT:   cir.return %[[RET_VAL]] : !cir.ptr<!s32i>
+
+enum {
+  um = 0,
+  dois = 1,
+};
