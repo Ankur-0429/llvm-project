@@ -102,3 +102,8 @@ size_type max_size() {
 // CHECK:   %3 = cir.cast(integral, %2 : !s32i), !u64i
 // CHECK:   %4 = cir.const #cir.int<8> : !u64i
 // CHECK:   %5 = cir.binop(div, %3, %4) : !u64i
+
+enum {
+  um = 0,
+  dois = 1,
+};
