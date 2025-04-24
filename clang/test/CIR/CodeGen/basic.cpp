@@ -103,7 +103,15 @@ size_type max_size() {
 // CHECK:   %4 = cir.const #cir.int<8> : !u64i
 // CHECK:   %5 = cir.binop(div, %3, %4) : !u64i
 
-enum {
-  um = 0,
-  dois = 1,
+enum A {
+  A_one,
+  A_two
 };
+A a;
+
+// CHECK:   cir.store %5, %0 : !u64i, !cir.ptr<!u64i>
+// CHECK:   %6 = cir.load %0 : !cir.ptr<!u64i>, !u64i
+// CHECK:   cir.return %6 : !u64i
+// CHECK:   }
+// CHECK:   cir.global external @a = #cir.int<0> : !u32i
+// CHECK:   }
